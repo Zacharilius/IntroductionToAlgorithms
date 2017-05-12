@@ -62,3 +62,26 @@ How can we modify almost any algorithm to have a good best-case running time?
 
 The information known about the data can aid in picking an algorithm that is better suited to solving the problem.
 
+# 2.3 Designing algorithms
+
+**Incremental** Approach: F/e: insertion sort
+
+**Divide and Conquer** Approach to Algorithms
+
+Recursive algorithms typically follow a divide-and-conquer approach.
+
+**Divide** the problem into subproblems of the same problem
+
+**Conquer** the subproblems by solving them recursively.
+
+**Combine** the solutions to the subproblems into the solution for the original problem.
+
+Example: *Merge sort*. Divides sequence into subsequences of n/2 elements each. Then Sorts the subsequences. The combines and sorts to produce the sorted answer.
+
+## Mergesort
+
+**Divide**: The divide step just computes the middle of the subarray, which takes constant time. Thus, D(n) = Θ(n).
+**Conquer**: We recursively solve two subproblems, each of size n=2, which contributes 2T(n=2) to the running time.**Combine**: We have already noted that the MERGE procedure on an n-element subarray takes time Θ(n), and so C(n) = Θ(n).
+
+Worse-case: 
+T(n) = Θ(n*lg(n))
